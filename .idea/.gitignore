@@ -6,3 +6,5 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+.idea
+C:\Users\User\PycharmProjects\book-list\.idea
