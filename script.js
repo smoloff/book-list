@@ -1,12 +1,52 @@
+
+let bookArr = [
+    {
+        title: "Moby-Dick",
+        genre: "Novel",
+        author: "Herman Melville",
+        read: false,
+        readDate: ""
+    },
+    {
+        title: "White Fang",
+        genre: "Adventure",
+        author: "Jack London",
+        read: true,
+        readDate: ""
+    },
+    {
+        title: "Martin Eden",
+        genre: "Novel",
+        author: "Jack London",
+        read: false,
+        readDate: ""
+    },
+    {
+        title: "Journey to the Center of the Earth ",
+        genre: "Science fiction",
+        author: "Jules Gabriel Verne",
+        read: false,
+        readDate: ""
+    }
+]
+
+
 class BookList {
     constructor() {
+        this.wasRead = [];
+        this.notRead = [];
         this.read;
         this.isreading;
         this.willRead;
+        this.allBooks = []
     }
-    allBooks = [];
 
-    add(book) {};
+    add(book) {
+        this.allBooks.push(book);
+        this.allBooks.(book.read) == true ? this.wasRead.push(book) : this.notRead.push(book); // перенос книги в нужный масив
+        console.log("win")
+
+    };
     finishCurrentBook() {};
 
     nextBook;
@@ -25,3 +65,9 @@ class Book{
         this.readDate = readDate;
     }
 }
+
+let booklist = new BookList();
+
+bookArr.forEach(element => booklist.add(new Book(element.title, element.genre, element.author, element.read, element.readDate)));
+
+console.log(booklist.allBooks);
